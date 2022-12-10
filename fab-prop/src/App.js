@@ -24,11 +24,29 @@ function Contact() {
   return (
     <div className="Contact-form">
       Get in touch
+      <Form />
      <div className="Contact-info">
-      Email: steff.jacobi@gmail.com
-      Links: airbnb, facebook,
+      Links: airbnb, facebook
      </div>
     </div>
+  );
+}
+
+function Form() {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log()
+  }
+  return (
+    <form className="contactForm" onSubmit={handleSubmit}>
+      <label className="labels" for="nameInput">Name</label>
+        <input name="nameInput" type="text" className="inputs" placeholder="First and Last name" required />
+      <label className="labels" for="emailInput">Email</label>
+        <input name="emailInput" type="email" className="inputs" placeholder="Email" required />
+      <label className="labels" for="messageInput">Message</label>
+        <textarea name="messageInput" className="inputs" placeholder="Enter message" rows="5" cols="40" required ></textarea>
+      <button type="submit" id="sendBtn">Send</button>
+    </form>
   );
 }
 

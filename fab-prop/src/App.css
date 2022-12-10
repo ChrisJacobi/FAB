@@ -24,3 +24,13 @@
   margin: 0.5rem 1rem 1rem 1rem;
 }
 
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+.labels, #sendBtn {
+  align-self: flex-start;
+}
+
+
